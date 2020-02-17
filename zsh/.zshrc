@@ -1,3 +1,14 @@
+# For emacs tramp this prevents hang
+if [[ "$TERM" == "dumb" ]]; then
+        unsetopt zle
+        unsetopt prompt_cr
+        unsetopt prompt_subst
+        unfunction precmd
+        unfunction preexec
+        PS1='$ '
+        return
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block, everything else may go below.
