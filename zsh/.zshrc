@@ -3,8 +3,6 @@ if [[ "$TERM" == "dumb" ]]; then
         unsetopt zle
         unsetopt prompt_cr
         unsetopt prompt_subst
-        unfunction precmd
-        unfunction preexec
         PS1='$ '
         return
 fi
@@ -44,4 +42,4 @@ source $ZSH/oh-my-zsh.sh
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-autoload -U compinit && compinit
+#autoload -U compinit && compinit
