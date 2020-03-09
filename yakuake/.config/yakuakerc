@@ -54,6 +54,7 @@ view-full-screen=Ctrl+Shift+F11
 [Window]
 DynamicTabTitles=true
 Height=100
+KeepOpen=false
 KeepOpenAfterLastSessionCloses=true
 ToggleToFocus=true
 Width=100
