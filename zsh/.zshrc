@@ -7,6 +7,9 @@ if [[ "$TERM" == "dumb" ]]; then
         return
 fi
 
+# Profiling ZSH
+# zmodload zsh/zprof
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block, everything else may go below.
@@ -19,9 +22,6 @@ ZSH_CUSTOM=$HOME/proj/jsirex/oh-my-zsh-custom
 
 # My fallback theme
 ZSH_THEME="fino-time"
-# Main Theme
-# Disablung powerlevel because it slow with long paths
-# ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Tune Oh My ZSH
 DISABLE_UNTRACKED_FILES_DIRTY="true"
@@ -32,7 +32,7 @@ ZSH_AUTOSUGGEST_STRATEGY=history
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 ZSH_AUTOSUGGEST_IGNORE_WIDGETS+=(backward-kill-word)
 
-plugins=(git extract mvn vagrant rvm debian docker docker-compose sudo terraform systemd z zsh-autosuggestions)
+plugins=(git extract mvn vagrant rvm rust cargo debian docker docker-compose sudo terraform systemd z zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -40,6 +40,12 @@ source $ZSH/oh-my-zsh.sh
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+alias loadrvm="source $HOME/.rvm/scripts/rvm"
 
-#autoload -U compinit && compinit
+# Add user local bin
+path=(~/.cargo/bin ~/.local/bin $path)
+
+autoload -U compinit && compinit
+
+# Call profile statistic
+# zprof
