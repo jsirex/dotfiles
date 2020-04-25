@@ -1,0 +1,7 @@
+#!/bin/bash
+
+pactl set-card-profile bluez_card.70_26_05_63_05_88 off
+bluetoothctl disconnect 70:26:05:63:05:88
+bluetoothctl connect 70:26:05:63:05:88
+pactl set-card-profile bluez_card.70_26_05_63_05_88 a2dp_sink
+

@@ -1,0 +1,9 @@
+#!/bin/bash -xe
+
+export CC=/usr/bin/gcc-9
+sudo systemctl stop sddm.service
+sudo chmod +x $@
+sudo -E $@ 
+sudo systemctl start sddm.service
+
+exit 0

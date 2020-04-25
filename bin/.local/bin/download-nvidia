@@ -1,0 +1,13 @@
+#!/bin/bash
+
+URL=http://download.nvidia.com/XFree86/Linux-x86_64
+LATEST=($(curl $URL/latest.txt))
+VERSION=${LATEST[0]}
+FILE=${LATEST[1]}
+
+echo "Detected latest version: ${LATEST[0]}"
+
+pushd /home/sirex/downloads > /dev/null
+wget -c "$URL/$FILE"
+popd > /dev/null
+
