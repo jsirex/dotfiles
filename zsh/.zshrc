@@ -32,7 +32,7 @@ ZSH_AUTOSUGGEST_STRATEGY=history
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 ZSH_AUTOSUGGEST_IGNORE_WIDGETS+=(backward-kill-word)
 
-plugins=(git extract mvn vagrant rvm rust cargo debian docker docker-compose sudo terraform systemd z zsh-autosuggestions)
+plugins=(git extract backup mvn vagrant rvm rust cargo debian docker docker-compose sudo terraform systemd z zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
