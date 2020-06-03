@@ -1,10 +1,10 @@
 # For emacs tramp this prevents hang
 if [[ "$TERM" == "dumb" ]]; then
-        unsetopt zle
-        unsetopt prompt_cr
-        unsetopt prompt_subst
-        PS1='$ '
-        return
+    unsetopt zle
+    unsetopt prompt_cr
+    unsetopt prompt_subst
+    PS1='$ '
+    return
 fi
 
 # Profiling ZSH
@@ -32,7 +32,7 @@ ZSH_AUTOSUGGEST_STRATEGY=history
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 ZSH_AUTOSUGGEST_IGNORE_WIDGETS+=(backward-kill-word)
 
-plugins=(git extract backup mvn vagrant rvm rust cargo debian docker docker-compose sudo terraform systemd z zsh-autosuggestions)
+plugins=(git extract backup mvn vagrant rvm rust cargo debian docker docker-compose sudo terraform systemd virtualenv z zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
