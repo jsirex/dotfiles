@@ -1,6 +1,6 @@
 #!/bin/bash -xe
 
-export CC=/usr/bin/gcc-9
+export CC=/usr/bin/gcc-10
 sudo systemctl stop sddm.service
 sudo chmod +x $@
 sudo -E $@ 
