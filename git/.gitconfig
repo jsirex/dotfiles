@@ -6,3 +6,7 @@
 [commit]
 [github]
 	user = jsirex
+[oh-my-zsh]
+	hide-info = 1
+[pull]
+	rebase = true
