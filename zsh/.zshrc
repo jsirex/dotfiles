@@ -44,9 +44,12 @@ source $ZSH/oh-my-zsh.sh
 alias loadrvm="source $HOME/.rvm/scripts/rvm"
 
 # Add user local bin
-path=(~/.cargo/bin ~/.local/bin $path)
+# path=(~/.cargo/bin ~/.local/bin $path)
 
 autoload -U compinit && compinit
 
 # Call profile statistic
 # zprof
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
