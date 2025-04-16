@@ -1,0 +1,23 @@
+scan_timeout = 20
+command_timeout = 200
+
+[aws]
+disabled = true
+
+[azure]
+disabled = true
+
+[battery]
+disabled = true
+
+[buf]
+disabled = true
+
+[bun]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[hostname]
+ssh_only = false
